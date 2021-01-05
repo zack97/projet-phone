@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Téléphone de Zacharie</title>
+</head>
+<style>
+  :root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  .container{
+    height: 150vh;
+    background: linear-gradient(0.25turn, blue, orange, red);
+  }
+ 
+  .bounce{
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .div{
+    display: flex;
+    flex-flow: row wrap;
+    width: 20rem;
+    background: #333;
+    grid-row: 2; 
+    grid-column: 2;
+    box-shadow: 10px 10px 20px 3px black;
+    border-radius: 20px;
+    border-top:3px solid black;
+  } 
+  .bouge:hover{ 
+    color: #333;
+    background-color: #fff;
+    transition-duration: 5s;
+  } 
+  
+  p{
+    color:black;
+    background: white;
+    padding: 0.5rem;
+  } 
+  span[data-description] {
+    position: relative;
+      padding-bottom: 0.8px;
+      border-bottom: 1px dashed green;
+      color:red;
+      cursor: help;
+  }
+  span[data-description]:hover::after {
+      content: attr(data-description);
+      position: absolute;
+      left: 0;
+      top: 23px;
+      min-width: 150px;
+      border-radius: 20px;
+      background-color: lightblue;
+      padding: 12px;
+      color: black;
+      font-size: 14px;
+      z-index: 1;
+
+    }
+  .elem- {
+    background: lightblue;
+    width: 70px;
+    height: 30px;
+    margin: 1rem;
+    transition: width 2s, height 2s,;
+    transition: all 1s ;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px orangered inset;
+    border-radius: 20px;
+  }
+  .elem-:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+   transform: scale(1.2);
+  }
+  .elem-:first-child{
+    background-color: teal;
+  }
+  .elem-:nth-child(12) {
+    background: blue;
+  }
+  .elem-:nth-of-type(2n){
+    background: yellow;
+  }
+  p::first-letter{
+    color:red;
+  }
+  p::first-line{
+    color: blue;
+  }
+  p::selection{
+    background-color: black;
+    color: red;
+  
+  }
+  .ecran{
+    background-color: #333;
+    height: 300px;
+    width: 320px;
+    grid-column: 2;
+    margin-top: 90px;
+    z-index: 1;
+    border-radius: 10px;
+    border-bottom:2px solid black;
+    
+  }
+  .screen{
+    background: linear-gradient(#222, #555, #222);
+    height: 220px;
+    width: 250px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  
+  .separator{
+    background: #444;
+    border-radius: 30px;
+    height: 15px;
+    width: 10rem;
+    margin: auto;
+    margin-top: 1.9rem;
+    box-shadow: 2px 2px 5px black;
+  }
+  .bounce{
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation: bounce 2s ease-in infinite alternate;
+  }
+ @keyframes bounce {
+      0% {
+        transform: translateX(0);}
+       
+      50%{transform:translateY(20px)}
+      100%{transform: tra();}
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="bounce"> 
+      <div class="ecran">
+        <div class="screen">
+          <iframe width="240" height="220"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?&loop=1&autoplay=1&mute=1&controls=0">
+        </iframe>
+        </div>
+        <div class="separator"></div>
+      </div>
+      <div class="div bouge">
+        <div class="elem-">1</div>
+        <div class="elem-">2</div>
+        <div class="elem-">3</div>
+        <div class="elem-">4</div>
+        <div class="elem-">5</div>
+        <div class="elem-">6</div>
+        <div class="elem-">7</div>
+        <div class="elem-">8</div>
+        <div class="elem-">9</div>
+        <div class="elem- ">10</div>
+        <div class="elem- ">11</div>
+        <div class="elem- ">12</div>
+        <p> 
+          ipsum dolor sit amet consectetur adipisicing elit.
+         <span data-description="zacharie">Exercitationem</span>   a porro maiores impedit obcaecati minus, aut sed dolor. Aut modi corporis assumenda illo nisi alias enim facere tempore ab magnam!</p>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>
